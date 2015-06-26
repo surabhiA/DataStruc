@@ -8,7 +8,21 @@ public class Year {
      *          false if year is not a leap year
      */
     static boolean isLeapYear(int year) {
-        return true;    // YOUR CODE HERE
+        int mod = year%4;
+        int mod1 = year%400;
+        int mod2 = year%100;
+       
+        if(mod==0){
+            if(mod2==0){
+                if(mod1==0)
+                    return true;
+                else
+                    return false;               
+            }
+            return true;
+        }
+        else 
+            return false;
     }
 
     /** Calls isLeapYear to print correct statement.
